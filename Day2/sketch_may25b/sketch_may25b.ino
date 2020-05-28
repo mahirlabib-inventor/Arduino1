@@ -1,4 +1,4 @@
-int led=13, input=3;
+int led=13, input=3, state;
 
 void setup() {
   // put your setup code here, to run once:
@@ -8,8 +8,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if(digitalRead(input, HIGH)){
-    digitalWrite(led, HIGH);    
-  }
+  state=digitalRead(input);
+  digitalWrite(led, state);
 
 }
